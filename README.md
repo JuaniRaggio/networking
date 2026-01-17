@@ -13,13 +13,14 @@ to send data between two systems, a PC and a ESP32WROOM
 The target system is a robot which will be controlled by signals who will be sent
 constantly. So in this case, since the importance of the data is to be constantly
 sent and recieved, TCP would be not the best choice since it will wait for EVERY
-package to be sent but in this case, it is not important the completeness of the
-packeges but it is the contiguity.
+package to be recieved, for this type of streaming of data, it is not important 
+the completeness of the packeges but it is the contiguity.
 
 
 In conclusion, if you need a stream of data in which you don't really care about
 the completeness of the packeges but you do care of the contiguity, UDP is a great
-choice. Note that the percentage of packeges lost isn't that high, its probably 1%
+choice. Note that the percentage of packeges lost isn't that high, its probably 
+around 1%
 
 
 > [!NOTE]
